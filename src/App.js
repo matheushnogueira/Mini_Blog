@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import CreatePost from "./pages/CreatePost";
+import Search from "./pages/Search";
 
 // components
 import NavBar from "./components/NavBar";
@@ -22,6 +23,7 @@ import { AuthProvider } from './context/authContext'
 
 // styles
 import "./App.css";
+
 
 function App() {
 
@@ -53,6 +55,9 @@ function App() {
                <Route 
                   path="/about" 
                   element={<About />} />
+               <Route 
+                  path="/search" 
+                  element={<Search />} />
                <Route 
                   path="/login" 
                   element={!user ? <Login /> : <Navigate to='/' /> } />
