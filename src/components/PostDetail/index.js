@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 
 const PostDetail = ({post}) => {
    return (
-      <div className={styles.posts_detail}>
+      <div className={styles.post_detail}>
          <img src={post.image} alt={post.title} />
          <h2>{post.title}</h2>
          <p className={styles.createdBy}>{post.createdBy}</p>

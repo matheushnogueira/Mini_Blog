@@ -13,6 +13,8 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import CreatePost from "./pages/CreatePost";
 import Search from "./pages/Search";
+import Post from "./pages/Post";
+import EditPost from "./pages/EditPost";
 
 // components
 import NavBar from "./components/NavBar";
@@ -23,6 +25,7 @@ import { AuthProvider } from './context/authContext'
 
 // styles
 import "./App.css";
+
 
 
 function App() {
@@ -58,6 +61,9 @@ function App() {
                <Route 
                   path="/search" 
                   element={<Search />} />
+                  <Route 
+                  path="/posts/:id" 
+                  element={<Post />} />
                <Route 
                   path="/login" 
                   element={!user ? <Login /> : <Navigate to='/' /> } />
@@ -70,6 +76,9 @@ function App() {
                <Route 
                   path="/dashboard" 
                   element={user ? <Dashboard /> : <Navigate to='/login'/>} />
+               <Route 
+                  path="/posts/edit/:id" 
+                  element={user ? <EditPost /> : <Navigate to='/login'/>} />
                   
             </Routes>
          </div>
